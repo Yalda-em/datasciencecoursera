@@ -39,10 +39,7 @@ same as y_test
 
 X_train 7325 rows with 561 columns same as y_train 
 
-
-
-
-
+cbind and rbind have been used.
 
 
 Section 2. Extract only the measurements on the mean and standard deviation for each measurement.
@@ -58,10 +55,14 @@ the size of data set is reduced to 10299 rows and 68 columns
 
 instead of labes for activities which were 1-6 which  the activitie are noe label with the real name, according to the file activity_labels.txt
 
+replacing the number with appropriate labels
+  columns_with_measures$Activity[columns_with_measures$Activity==activity_labels[i,1]]<-as.character(activity_labels[i,2])
+according to the file activity_label
+
 Section 4. Appropriately label the data set with descriptive activity names.
 the names which were shorten now will be replaced by complete name.
 the functin gsub has been used.
-
+making the shortenname long with more description
 
 Variables :
 
@@ -628,7 +629,7 @@ Variables :
 561 angle(Z,gravityMean)
 
  561 features
-needed for this project 
+needed for this project , the original one, which will be shorten only to 68
 
 mean(): Mean value
 std(): Standard deviation
