@@ -47,8 +47,10 @@ Section 2. Extract only the measurements on the mean and standard deviation for 
 mean_std_measures=matchcols(all_data,with = c( ".*-mean\\(.*" ,    ".*-std\\(.*" ), method=c("or")   )
   mean_std_measures1=unlist(mean_std_measures) # getting only the column with the mean and std 
 the package ,    require(gdata) is  needed to use matchcols
-Section 
-the size of data set is reduced to 10299 rows and 68 columns
+ having names of all the columns containing mean and std then we add activity and subject to the list and then according to the list we will subset our data 
+
+
+the size of data set is reduced to 10299 rows and 68columns
 
 
 3. Use descriptive activity names to name the activities in the data set
@@ -629,7 +631,7 @@ Variables :
 561 angle(Z,gravityMean)
 
  561 features
-needed for this project , the original one, which will be shorten only to 68
+needed for this project , the original one, which will be shorten only to 68 with adding the Activity and subject
 
 mean(): Mean value
 std(): Standard deviation
