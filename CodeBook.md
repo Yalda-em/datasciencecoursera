@@ -7,6 +7,15 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
 
+Activity :
+1 WALKING
+2 WALKING_UPSTAIRS
+3 WALKING_DOWNSTAIRS
+4 SITTING
+5 STANDING
+6 LAYING
+
+
 
 Section 1. Merge the training and the test sets to create one data set.
 
@@ -618,8 +627,22 @@ Variables :
 560 angle(Y,gravityMean)
 561 angle(Z,gravityMean)
 
-
+ 561 features
 needed for this project 
 
 mean(): Mean value
 std(): Standard deviation
+
+
+For each record it is provided:
+======================================
+
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+- 
+tidydata: 
+Each variable you measure should be in one column,
+Each different observation of that variable should be in a different row).
